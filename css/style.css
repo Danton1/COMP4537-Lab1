@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+#writer {
+    background-color: #9ed1e2;
+    border: 1px solid blue;
+}
+
+#reader {
+    background-color: #90ee90;
+    border: 1px solid #008000;
+}
+
+#writer, #reader {
+    padding: 10px;
+    border-radius: 5px;
+    height: 5rem;
+    width: 10rem;
+    box-shadow: 2px 2px 5px grey;
+    margin: 20px;
+    font-size: 1em;
+    font-weight: bold;
+    transition: 0.7s;
+}
+
+#writer:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px #007BFF;
+}
+
+#reader:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px #28A745;
+}
+
+#writer:hover {
+    background-color: #bedee9;
+    transform: scale(1.05);
+}
+
+#reader:hover {
+    background-color: #c3ebc3;
+    transform: scale(1.05);
+}
+
+.button-wrapper {
+    display: flex;
+    gap: 10px;
+    width: 80%;
+    justify-content: center;
+    margin: auto;
+    padding-top: 20px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    height: 100%;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+#notesContainer, #messageContainer {
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    padding-bottom: 80px;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: rgb(243, 250, 255);
+    border-radius: 5px;
+    resize: vertical;
+    font-size: 1em;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #6db3ff;
+    box-shadow: 0 0 5px 2px #daecff;
+}
+
+/* Lay out each note as a row: textarea + button side by side */
+.note {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  margin: 12px 0;
+}
+
+/* Make textarea grow to fill available space in the row */
+.note textarea {
+  flex: 1;
+}
+
+/* Red remove button with a trash icon */
+.btn-remove {
+  background: #e53935;
+  border: 1px solid #b71c1c;
+  color: #fff;
+  padding: 10px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-remove .icon {
+  margin-right: 6px;
+  line-height: 1;
+}
+
+.btn-remove:hover {
+  background: #d32f2f;
+}
+
+.btn-remove:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(229, 57, 53, 0.35);
+}
+
+/* Keep footer centered at the bottom with a simple round back button */
+.site-footer {
+  position: fixed;
+  left: 0; right: 0; bottom: 16px;
+  display: flex;
+  justify-content: center;
+  pointer-events: none; /* lets only the button receive clicks */
+}
+
+.site-footer .back {
+  pointer-events: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #333;
+  text-decoration: none;
+  font-size: 22px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,.15);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.site-footer .back:hover {
+  transform: translateY(-1px);
+  transform: scale(1.25);
+  box-shadow: 3px 6px 10px rgba(0,0,0,.18);
+}
+
+.site-footer .back:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(100, 149, 237, 0.35);
+}
+
+.add-btn{
+    width: 6rem;
+    height: 2.5rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px grey;
+}
+.add-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+.add-btn:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px #67ff81;
+}
