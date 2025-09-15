@@ -323,7 +323,7 @@ class RemoveButton {
 if (document.location.href.includes("writer.html")){
     let writer = new Writer();
 }
-if (document.location.href.includes("index.html")) {
+if (document.getElementById('writer') && document.getElementById('reader')) {
     let ui = new UI();
 }
 if (document.location.href.includes("reader.html")){
